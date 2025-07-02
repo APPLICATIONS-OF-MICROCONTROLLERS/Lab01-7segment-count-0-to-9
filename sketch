@@ -1,0 +1,183 @@
+const int SEG_A = 19;
+const int SEG_B = 18; 
+const int SEG_C = 5; 
+const int SEG_D = 17; 
+const int SEG_E = 16; 
+const int SEG_F = 4; 
+const int SEG_G = 0; 
+
+void setup() {
+pinMode(SEG_A, OUTPUT);
+pinMode(SEG_B, OUTPUT); 
+pinMode(SEG_C, OUTPUT); 
+pinMode(SEG_D, OUTPUT); 
+pinMode(SEG_E, OUTPUT); 
+pinMode(SEG_F, OUTPUT); 
+pinMode(SEG_G, OUTPUT); 
+
+offDisplay();
+}
+void offDisplay(){
+digitalWrite(SEG_A, LOW);
+digitalWrite(SEG_B, LOW); 
+digitalWrite(SEG_C, LOW); 
+digitalWrite(SEG_D, LOW); 
+digitalWrite(SEG_E, LOW); 
+digitalWrite(SEG_F, LOW); 
+digitalWrite(SEG_G, LOW); 
+}
+ void Digit0(){
+ digitalWrite(SEG_A, HIGH);
+ digitalWrite(SEG_B, HIGH); 
+ digitalWrite(SEG_C, HIGH); 
+ digitalWrite(SEG_D, HIGH); 
+ digitalWrite(SEG_E, HIGH); 
+ digitalWrite(SEG_F, HIGH); 
+ digitalWrite(SEG_G, LOW); 
+}
+void Digit1() {
+  digitalWrite(SEG_A, LOW);  // A ปิด
+  digitalWrite(SEG_B, HIGH); // B เปิด
+  digitalWrite(SEG_C, HIGH); // C เปิด
+  digitalWrite(SEG_D, LOW);  // D ปิด
+  digitalWrite(SEG_E, LOW);  // E ปิด
+  digitalWrite(SEG_F, LOW);  // F ปิด
+  digitalWrite(SEG_G, LOW);  // G ปิด
+}
+
+// ฟังก์ชันสำหรับแสดงตัวเลข 2
+void Digit2() {
+  digitalWrite(SEG_A, HIGH); // A เปิด
+  digitalWrite(SEG_B, HIGH); // B เปิด
+  digitalWrite(SEG_C, LOW);  // C ปิด
+  digitalWrite(SEG_D, HIGH); // D เปิด
+  digitalWrite(SEG_E, HIGH); // E เปิด
+  digitalWrite(SEG_F, LOW);  // F ปิด
+  digitalWrite(SEG_G, HIGH); // G เปิด
+}
+
+// ฟังก์ชันสำหรับแสดงตัวเลข 3
+void Digit3() {
+  digitalWrite(SEG_A, HIGH); // A เปิด
+  digitalWrite(SEG_B, HIGH); // B เปิด
+  digitalWrite(SEG_C, HIGH); // C เปิด
+  digitalWrite(SEG_D, HIGH); // D เปิด
+  digitalWrite(SEG_E, LOW);  // E ปิด
+  digitalWrite(SEG_F, LOW);  // F ปิด
+  digitalWrite(SEG_G, HIGH); // G เปิด
+}
+
+// ฟังก์ชันสำหรับแสดงตัวเลข 4
+void Digit4() {
+  digitalWrite(SEG_A, LOW);  // A ปิด
+  digitalWrite(SEG_B, HIGH); // B เปิด
+  digitalWrite(SEG_C, HIGH); // C เปิด
+  digitalWrite(SEG_D, LOW);  // D ปิด
+  digitalWrite(SEG_E, LOW);  // E ปิด
+  digitalWrite(SEG_F, HIGH); // F เปิด
+  digitalWrite(SEG_G, HIGH); // G เปิด
+}
+
+// ฟังก์ชันสำหรับแสดงตัวเลข 5
+void Digit5() {
+  digitalWrite(SEG_A, HIGH); // A เปิด
+  digitalWrite(SEG_B, LOW);  // B ปิด
+  digitalWrite(SEG_C, HIGH); // C เปิด
+  digitalWrite(SEG_D, HIGH); // D เปิด
+  digitalWrite(SEG_E, LOW);  // E ปิด
+  digitalWrite(SEG_F, HIGH); // F เปิด
+  digitalWrite(SEG_G, HIGH); // G เปิด
+}
+
+// ฟังก์ชันสำหรับแสดงตัวเลข 6
+void Digit6() {
+  digitalWrite(SEG_A, HIGH); // A เปิด
+  digitalWrite(SEG_B, LOW);  // B ปิด
+  digitalWrite(SEG_C, HIGH); // C เปิด
+  digitalWrite(SEG_D, HIGH); // D เปิด
+  digitalWrite(SEG_E, HIGH); // E เปิด
+  digitalWrite(SEG_F, HIGH); // F เปิด
+  digitalWrite(SEG_G, HIGH); // G เปิด
+}
+
+// ฟังก์ชันสำหรับแสดงตัวเลข 7
+void Digit7() {
+  digitalWrite(SEG_A, HIGH); // A เปิด
+  digitalWrite(SEG_B, HIGH); // B เปิด
+  digitalWrite(SEG_C, HIGH); // C เปิด
+  digitalWrite(SEG_D, LOW);  // D ปิด
+  digitalWrite(SEG_E, LOW);  // E ปิด
+  digitalWrite(SEG_F, LOW);  // F ปิด
+  digitalWrite(SEG_G, LOW);  // G ปิด
+}
+
+// ฟังก์ชันสำหรับแสดงตัวเลข 8
+void Digit8() {
+  digitalWrite(SEG_A, HIGH); // A เปิด
+  digitalWrite(SEG_B, HIGH); // B เปิด
+  digitalWrite(SEG_C, HIGH); // C เปิด
+  digitalWrite(SEG_D, HIGH); // D เปิด
+  digitalWrite(SEG_E, HIGH); // E เปิด
+  digitalWrite(SEG_F, HIGH); // F เปิด
+  digitalWrite(SEG_G, HIGH); // G เปิด
+}
+
+// ฟังก์ชันสำหรับแสดงตัวเลข 9
+void Digit9() {
+  digitalWrite(SEG_A, HIGH); // A เปิด
+  digitalWrite(SEG_B, HIGH); // B เปิด
+  digitalWrite(SEG_C, HIGH); // C เปิด
+  digitalWrite(SEG_D, HIGH); // D เปิด
+  digitalWrite(SEG_E, LOW);  // E ปิด
+  digitalWrite(SEG_F, HIGH); // F เปิด
+  digitalWrite(SEG_G, HIGH); // G เปิด
+}
+
+void loop() {
+  Digit0();
+  delay(500);
+ Digit1();
+  delay(500);
+  offDisplay(); // ปิดจอก่อนเปลี่ยนเลข เพื่อให้ดูไม่ซ้อนกัน
+  delay(100);
+
+  Digit2();
+  delay(500);
+  offDisplay();
+  delay(100);
+
+  Digit3();
+  delay(500);
+  offDisplay();
+  delay(100);
+
+  Digit4();
+  delay(500);
+  offDisplay();
+  delay(100);
+
+  Digit5();
+  delay(500);
+  offDisplay();
+  delay(100);
+
+  Digit6();
+  delay(500);
+  offDisplay();
+  delay(100);
+
+  Digit7();
+  delay(500);
+  offDisplay();
+  delay(100);
+
+  Digit8();
+  delay(500);
+  offDisplay();
+  delay(100);
+
+  Digit9();
+  delay(500);
+  offDisplay();
+  delay(100);
+}
