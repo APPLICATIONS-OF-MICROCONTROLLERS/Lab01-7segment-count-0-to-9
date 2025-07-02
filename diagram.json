@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Chanin Khomvongsa",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -86.4, "left": -71.96, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -33.42,
+      "left": 235.48,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "sevseg1:A", "esp:13", "purple", [ "v-27.96", "h-297.75" ] ],
+    [ "sevseg1:B", "esp:12", "white", [ "v-37.56", "h-307.35" ] ],
+    [ "sevseg1:C", "esp:14", "black", [ "v76.8", "h-297.75" ] ],
+    [ "sevseg1:D", "esp:27", "blue", [ "v57.6", "h-278.55" ] ],
+    [ "sevseg1:F", "esp:25", "cyan", [ "v-18.36", "h-278.55" ] ],
+    [ "sevseg1:G", "esp:33", "orange", [ "v-47.16", "h-268.95" ] ],
+    [ "sevseg1:E", "esp:26", "red", [ "v0" ] ],
+    [ "sevseg1:COM.2", "esp:GND.2", "white", [ "h0" ] ],
+    [ "sevseg1:COM.1", "esp:GND.2", "white", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
