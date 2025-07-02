@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "author": "Pawarit Wongsansuk",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -48, "left": -177.56, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -62.22,
+      "left": 24.28,
+      "attrs": { "color": "#d040d0", "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 51.95,
+      "left": -57.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 42.35,
+      "left": -57.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 61.55,
+      "left": -57.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 71.15,
+      "left": -57.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": 80.75,
+      "left": -57.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": 90.35,
+      "left": -57.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": 99.95,
+      "left": -57.6,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:19", "r2:1", "green", [ "h0" ] ],
+    [ "esp:18", "r1:1", "green", [ "h0" ] ],
+    [ "esp:5", "r3:1", "green", [ "h0" ] ],
+    [ "esp:17", "r4:1", "green", [ "h0" ] ],
+    [ "esp:16", "r5:1", "green", [ "h0" ] ],
+    [ "esp:4", "r6:1", "green", [ "h0" ] ],
+    [ "esp:0", "r7:1", "green", [ "h0" ] ],
+    [ "sevseg1:A", "r2:2", "green", [ "v-18.36", "h-57.6", "v124.8" ] ],
+    [ "sevseg1:B", "r1:2", "green", [ "v-27.96", "h-57.6", "v144" ] ],
+    [ "sevseg1:C", "r3:2", "green", [ "v0" ] ],
+    [ "sevseg1:D", "r4:2", "green", [ "v0" ] ],
+    [ "sevseg1:E", "r5:2", "green", [ "v0" ] ],
+    [ "sevseg1:F", "r6:2", "green", [ "v-8.76", "h38.4", "v163.2" ] ],
+    [ "sevseg1:G", "r7:2", "green", [ "v-37.56", "h86.4", "v201.6" ] ],
+    [ "esp:GND.2", "sevseg1:COM.2", "black", [ "v-86.4", "h124.8" ] ]
+  ],
+  "dependencies": {}
+}
