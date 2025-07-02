@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Phumipat Kunduang",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -19.2, "left": -110.36, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 33.78,
+      "left": 62.68,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "sevseg1:COM.2", "esp:GND.2", "white", [ "h0", "v-37.56" ] ],
+    [ "sevseg1:A", "esp:23", "white", [ "v-18.36" ] ],
+    [ "sevseg1:F", "esp:5", "gold", [ "v20.04", "h-48", "v-9.6" ] ],
+    [ "sevseg1:G", "esp:4", "blue", [ "v0.84", "h-19.2", "v76.8" ] ],
+    [ "sevseg1:C", "esp:21", "red", [ "v57.6", "h-57.6", "v-105.6" ] ],
+    [ "esp:GND.3", "sevseg1:COM.1", "white", [ "h67.2", "v57.6", "h28.8" ] ],
+    [ "sevseg1:D", "esp:19", "magenta", [ "v28.8", "h-57.6", "v-57.6" ] ],
+    [ "sevseg1:E", "esp:16", "green", [ "v9.6", "h-67.2" ] ],
+    [ "sevseg1:B", "esp:22", "#8f4814", [ "v-18.36" ] ]
+  ],
+  "dependencies": {}
+}
