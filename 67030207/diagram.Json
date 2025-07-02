@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Wattikorn Inthongkum",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -105.6,
+      "left": -167.96,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -52.62,
+      "left": 110.68,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "sevseg1:A", "esp:23", "green", [ "v0" ] ],
+    [ "sevseg1:B", "esp:22", "green", [ "v0" ] ],
+    [ "sevseg1:C", "esp:21", "green", [ "v0" ] ],
+    [ "sevseg1:D", "esp:19", "green", [ "v0" ] ],
+    [ "sevseg1:E", "esp:18", "green", [ "v0" ] ],
+    [ "sevseg1:F", "esp:5", "green", [ "v10.44", "h-28.8", "v48" ] ],
+    [ "sevseg1:G", "esp:4", "green", [ "v-37.56", "h-28.8", "v124.8" ] ],
+    [ "esp:GND.2", "sevseg1:COM.2", "black", [ "v-19.2", "h201.6" ] ],
+    [ "esp:GND.3", "sevseg1:COM.1", "black", [ "h172.8", "v57.6", "h28.8" ] ]
+  ],
+  "dependencies": {}
+}
