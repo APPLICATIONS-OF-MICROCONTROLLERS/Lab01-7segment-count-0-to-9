@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "siwarpat auisui",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 50, "left": 50, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "seg",
+      "top": 91.38,
+      "left": 293.08,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "esp:D23", "seg:A", "green", [ "h0" ] ],
+    [ "esp:D22", "seg:B", "green", [ "h0" ] ],
+    [ "esp:D21", "seg:C", "green", [ "h59.9", "v79.1", "h105.6" ] ],
+    [ "esp:D19", "seg:D", "green", [ "h50.3", "v79.4", "h105.6" ] ],
+    [ "esp:D18", "seg:E", "green", [ "h40.7", "v79.5", "h105.6" ] ],
+    [ "esp:D5", "seg:F", "green", [ "h69.5", "v-83.7", "h76.8" ] ],
+    [ "esp:D4", "seg:G", "green", [ "h79.1", "v-122", "h67.2" ] ],
+    [ "esp:GND.1", "seg:COM.1", "black", [ "h21.5", "v41", "h144" ] ],
+    [ "seg:COM.2", "esp:GND.1", "green", [ "h0", "v-66.36", "h-144", "v182.4" ] ]
+  ],
+  "dependencies": {}
+}
