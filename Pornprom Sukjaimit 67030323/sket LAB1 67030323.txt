@@ -1,0 +1,139 @@
+const int SEG_A = 23;
+const int SEG_B = 22;
+const int SEG_C = 21;
+const int SEG_D = 19;
+const int SEG_E = 18;
+const int SEG_F = 5;
+const int SEG_G = 17;
+
+const int segmentPins[7] = {SEG_A, SEG_B, SEG_C, SEG_D, SEG_E, SEG_F, SEG_G};
+
+void setup() {
+  for (int i = 0; i < 7; i++) {
+    pinMode(segmentPins[i], OUTPUT);      // ตั้งให้เป็นขา OUTPUT
+    digitalWrite(segmentPins[i], HIGH);   // เปิดทุก segment
+  }
+}
+
+void Digit0() {
+  digitalWrite(SEG_A, HIGH);
+  digitalWrite(SEG_B, HIGH);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, HIGH);
+  digitalWrite(SEG_E, HIGH);
+  digitalWrite(SEG_F, HIGH);
+  digitalWrite(SEG_G, LOW);
+}
+
+void Digit1() {
+  digitalWrite(SEG_A, LOW);
+  digitalWrite(SEG_B, HIGH);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, LOW);
+  digitalWrite(SEG_E, LOW);
+  digitalWrite(SEG_F, LOW);
+  digitalWrite(SEG_G, LOW);
+}
+
+void Digit2() {
+  digitalWrite(SEG_A, HIGH);
+  digitalWrite(SEG_B, HIGH);
+  digitalWrite(SEG_C, LOW);
+  digitalWrite(SEG_D, HIGH);
+  digitalWrite(SEG_E, HIGH);
+  digitalWrite(SEG_F, LOW);
+  digitalWrite(SEG_G, HIGH);
+}
+
+void Digit3() {
+  digitalWrite(SEG_A, HIGH);
+  digitalWrite(SEG_B, HIGH);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, HIGH);
+  digitalWrite(SEG_E, LOW);
+  digitalWrite(SEG_F, LOW);
+  digitalWrite(SEG_G, HIGH);
+}
+
+void Digit4() {
+  digitalWrite(SEG_A, LOW);
+  digitalWrite(SEG_B, HIGH);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, LOW);
+  digitalWrite(SEG_E, LOW);
+  digitalWrite(SEG_F, HIGH);
+  digitalWrite(SEG_G, HIGH);
+}
+
+void Digit5() {
+  digitalWrite(SEG_A, HIGH);
+  digitalWrite(SEG_B, LOW);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, HIGH);
+  digitalWrite(SEG_E, LOW);
+  digitalWrite(SEG_F, HIGH);
+  digitalWrite(SEG_G, HIGH);
+}
+
+void Digit6() {
+  digitalWrite(SEG_A, HIGH);
+  digitalWrite(SEG_B, LOW);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, HIGH);
+  digitalWrite(SEG_E, HIGH);
+  digitalWrite(SEG_F, HIGH);
+  digitalWrite(SEG_G, HIGH);
+}
+
+void Digit7() {
+  digitalWrite(SEG_A, HIGH);
+  digitalWrite(SEG_B, HIGH);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, LOW);
+  digitalWrite(SEG_E, LOW);
+  digitalWrite(SEG_F, LOW);
+  digitalWrite(SEG_G, LOW);
+}
+
+void Digit8() {
+  digitalWrite(SEG_A, HIGH);
+  digitalWrite(SEG_B, HIGH);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, HIGH);
+  digitalWrite(SEG_E, HIGH);
+  digitalWrite(SEG_F, HIGH);
+  digitalWrite(SEG_G, HIGH);
+}
+
+void Digit9() {
+  digitalWrite(SEG_A, HIGH);
+  digitalWrite(SEG_B, HIGH);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, HIGH);
+  digitalWrite(SEG_E, LOW);
+  digitalWrite(SEG_F, HIGH);
+  digitalWrite(SEG_G, HIGH);
+}
+
+void loop() {
+  Digit0();        // แสดงเลข 0
+  delay(1000);     // รอ 1 วินาที
+  Digit1();       
+  delay(1000);
+  Digit2();       
+  delay(1000); 
+  Digit3();       
+  delay(1000); 
+  Digit4();       
+  delay(1000); 
+  Digit5();       
+  delay(1000); 
+  Digit6();       
+  delay(1000); 
+  Digit7();       
+  delay(1000);   
+  Digit8();       
+  delay(1000); 
+  Digit9();       
+  delay(1000); 
+}
