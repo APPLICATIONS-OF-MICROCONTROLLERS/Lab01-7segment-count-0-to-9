@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -873.6,
+      "left": -350.36,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -753.42,
+      "left": -90.92,
+      "attrs": { "common": "cathode", "digits": "1", "colon": "" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -783.25,
+      "left": -220.8,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -773.65,
+      "left": -220.8,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -764.05,
+      "left": -220.8,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": -754.45,
+      "left": -220.8,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": -744.85,
+      "left": -220.8,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": -735.25,
+      "left": -220.8,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": -725.65,
+      "left": -220.8,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r8",
+      "top": -716.05,
+      "left": -220.8,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.3", "sevseg1:COM.1", "black", [ "h316.8", "v124.8", "h-153.6" ] ],
+    [ "esp:19", "r1:1", "green", [ "h0" ] ],
+    [ "r1:2", "sevseg1:A", "green", [ "v0", "h104.4" ] ],
+    [ "esp:18", "r2:1", "green", [ "h0" ] ],
+    [ "r2:2", "sevseg1:B", "cyan", [ "v0", "h114" ] ],
+    [ "esp:5", "r3:1", "green", [ "h0" ] ],
+    [ "r3:2", "sevseg1:C", "red", [ "v0", "h133.2", "v86.4", "h-28.8" ] ],
+    [ "esp:2", "r8:1", "green", [ "h0" ] ],
+    [ "r8:2", "sevseg1:DP", "violet", [ "v57.6", "h123.6" ] ],
+    [ "esp:17", "r4:1", "green", [ "h0" ] ],
+    [ "esp:16", "r5:1", "green", [ "h0" ] ],
+    [ "esp:4", "r6:1", "green", [ "h0" ] ],
+    [ "esp:0", "r7:1", "green", [ "h0" ] ],
+    [ "r4:2", "sevseg1:D", "blue", [ "v0", "h56.4", "v86.4", "h28.8" ] ],
+    [ "r5:2", "sevseg1:E", "orange", [ "v0", "h46.8", "v57.6" ] ],
+    [ "r6:2", "sevseg1:F", "gold", [ "v0", "h66", "v-76.8", "h19.2" ] ],
+    [ "r7:2", "sevseg1:G", "white", [ "v0", "h37.2", "v-105.6", "h38.4" ] ]
+  ],
+  "dependencies": {}
+}
