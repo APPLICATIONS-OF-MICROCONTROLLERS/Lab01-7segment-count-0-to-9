@@ -15,15 +15,7 @@ void setup() {
   pinMode(SEG_F, OUTPUT);
   pinMode(SEG_G, OUTPUT);
 }
-void Digite0() {
-  digitalWrite(SEG_A, HIGH);
-  digitalWrite(SEG_B, HIGH);
-  digitalWrite(SEG_C, HIGH);
-  digitalWrite(SEG_D, HIGH);
-  digitalWrite(SEG_E, HIGH);
-  digitalWrite(SEG_F, HIGH);
-  digitalWrite(SEG_G, LOW);
-}
+
 void clearSegments() {
   digitalWrite(SEG_A, LOW);
   digitalWrite(SEG_B, LOW);
@@ -34,6 +26,15 @@ void clearSegments() {
   digitalWrite(SEG_G, LOW);
 }
 
+void Digite0() {
+  digitalWrite(SEG_A, HIGH);
+  digitalWrite(SEG_B, HIGH);
+  digitalWrite(SEG_C, HIGH);
+  digitalWrite(SEG_D, HIGH);
+  digitalWrite(SEG_E, HIGH);
+  digitalWrite(SEG_F, HIGH);
+  digitalWrite(SEG_G, LOW);
+}
 void Digit1() {
   clearSegments();
   digitalWrite(SEG_B, HIGH);
@@ -114,6 +115,8 @@ void Digit9() {
 }
 
 void loop() {
+  Digite0();
+  delay(500);
   Digit1();
   delay(1000);
   Digit2();
@@ -131,7 +134,5 @@ void loop() {
   Digit8();
   delay(1000);
   Digit9();
-  delay(1000);
-  Digit0();
   delay(1000);
 }
