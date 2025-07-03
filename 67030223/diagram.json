@@ -1,84 +1,84 @@
 {
   "version": 1,
-  "author": "Saranyaphat Khanannuang",
+  "author": "Uri Shaked",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -96, "left": -177.56, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -9.6, "left": -244.76, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 196.98,
+      "left": 110.68,
+      "attrs": { "common": "cathode" }
+    },
     {
       "type": "wokwi-resistor",
       "id": "r1",
-      "top": 32.75,
-      "left": -9.6,
+      "top": 23.15,
+      "left": -38.4,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r2",
-      "top": 42.35,
-      "left": -9.6,
+      "top": 32.75,
+      "left": -38.4,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r3",
-      "top": 51.95,
-      "left": -9.6,
+      "top": 61.55,
+      "left": -38.4,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r4",
-      "top": 61.55,
-      "left": -9.6,
+      "top": 119.15,
+      "left": -38.4,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r5",
-      "top": -24.85,
-      "left": -19.2,
+      "top": 128.75,
+      "left": -38.4,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r6",
-      "top": -53.65,
-      "left": -19.2,
+      "top": 138.35,
+      "left": -38.4,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r7",
-      "top": -63.25,
-      "left": -19.2,
+      "top": 147.95,
+      "left": -38.4,
       "attrs": { "value": "1000" }
-    },
-    {
-      "type": "wokwi-7segment",
-      "id": "sevseg1",
-      "top": 52.98,
-      "left": 129.88,
-      "attrs": { "common": "cathode" }
     }
   ],
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
     [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "sevseg1:A", "r1:2", "green", [ "v-18.36", "h-76.8" ] ],
-    [ "r1:1", "esp:16", "green", [ "v0" ] ],
-    [ "sevseg1:B", "r2:2", "green", [ "v-18.36" ] ],
-    [ "r2:1", "esp:17", "green", [ "v0", "h-38.4", "v-19.2" ] ],
-    [ "sevseg1:C", "r3:2", "green", [ "v19.2", "h-57.6", "v9.6" ] ],
-    [ "r3:1", "esp:18", "green", [ "v0", "h-9.6", "v-48" ] ],
-    [ "sevseg1:D", "r4:2", "green", [ "v57.6", "h-67.2", "v-115.2" ] ],
-    [ "r4:1", "esp:19", "green", [ "v0", "h-19.2", "v-67.2" ] ],
-    [ "sevseg1:E", "r5:2", "green", [ "v38.4", "h-38.4", "v-182.4" ] ],
-    [ "r5:1", "esp:21", "green", [ "v0" ] ],
-    [ "sevseg1:F", "r6:2", "green", [ "v-114.36" ] ],
-    [ "r6:1", "esp:22", "green", [ "v0" ] ],
-    [ "sevseg1:G", "r7:2", "green", [ "v-114.36", "h-9.6" ] ],
-    [ "r7:1", "esp:23", "green", [ "v0" ] ],
-    [ "esp:GND.3", "sevseg1:COM.1", "black", [ "h316.8", "v201.6", "h-19.2" ] ]
+    [ "esp:GND.3", "sevseg1:COM.1", "black", [ "h326.4", "v211.2", "h-48" ] ],
+    [ "sevseg1:G", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "esp:23", "green", [ "v0" ] ],
+    [ "sevseg1:F", "r2:2", "green", [ "v0" ] ],
+    [ "r2:1", "esp:22", "green", [ "v0" ] ],
+    [ "sevseg1:A", "r4:2", "green", [ "v-8.76", "h-96", "v28.8" ] ],
+    [ "r4:1", "esp:16", "green", [ "v0" ] ],
+    [ "sevseg1:B", "r5:2", "green", [ "v0" ] ],
+    [ "r5:1", "esp:17", "green", [ "v0", "h-86.4", "v-19.2" ] ],
+    [ "sevseg1:E", "r3:2", "green", [ "v38.4", "h-28.8", "v-240", "h-66" ] ],
+    [ "r3:1", "esp:21", "green", [ "v0" ] ],
+    [ "sevseg1:D", "r6:2", "green", [ "v57.6", "h-57.6", "v-182.4" ] ],
+    [ "r6:1", "esp:19", "green", [ "v0", "h-67.2", "v-57.6" ] ],
+    [ "sevseg1:C", "r7:2", "green", [ "v67.2", "h-86.4", "v-182.4", "h-19.2" ] ],
+    [ "r7:1", "esp:18", "green", [ "v0", "h-38.4", "v-57.6" ] ]
   ],
   "dependencies": {}
 }
