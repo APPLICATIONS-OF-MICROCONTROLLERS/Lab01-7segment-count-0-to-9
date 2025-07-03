@@ -30,7 +30,6 @@ pinMode(SEG_D, OUTPUT);
 pinMode(SEG_E, OUTPUT);
 pinMode(SEG_F, OUTPUT);
 pinMode(SEG_G, OUTPUT);
-pinMode(SEG_DP, OUTPUT); // กำหนดขา DP เป็น OUTPUT ด้วย
 
 Serial.begin(115200);
 }
@@ -45,9 +44,7 @@ digitalWrite(SEG_D, digits[digit][3]);
 digitalWrite(SEG_E, digits[digit][4]);
 digitalWrite(SEG_F, digits[digit][5]);
 digitalWrite(SEG_G, digits[digit][6]);
-digitalWrite(SEG_DP, digits[digit][7]);
 } else {
-// ถ้าตัวเลขไม่อยู่ในช่วง 0-9 ให้ปิดทุก Segment
 digitalWrite(SEG_A, LOW);
 digitalWrite(SEG_B, LOW);
 digitalWrite(SEG_C, LOW);
@@ -55,7 +52,6 @@ digitalWrite(SEG_D, LOW);
 digitalWrite(SEG_E, LOW);
 digitalWrite(SEG_F, LOW);
 digitalWrite(SEG_G, LOW);
-digitalWrite(SEG_DP, LOW);
 }
 }
 
